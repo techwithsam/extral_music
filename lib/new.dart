@@ -1,6 +1,4 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:showextral_music/webpage.dart';
 
 class MainPage extends StatefulWidget {
@@ -12,22 +10,20 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   final WebExampleFour inAppChrome = WebExampleFour();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Color(0xFF1E1E26),
+    );
   }
 
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(milliseconds: 100), (duration) {
-      inAppChrome.open(
-          url: Uri.parse("https://music.showextral.com"),
-          options: ChromeSafariBrowserClassOptions(
-              android: AndroidChromeCustomTabsOptions(
-                  addDefaultShareMenuItem: false,
-                  toolbarBackgroundColor: Color(0xFF1E1E26)),
-              ios: IOSSafariOptions()));
-    });
+    // Future.delayed(Duration(milliseconds: 100), () {
+    //   Navigator.push(
+    //       context, MaterialPageRoute(builder: (_) => WebExampleTwo()));
+    // });
   }
 }
