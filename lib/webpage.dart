@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
@@ -166,7 +165,6 @@ class _WebExampleTwoState extends State<WebExampleTwo> {
     );
   }
 }
-
 
 class WebExampleFour extends ChromeSafariBrowser {
   @override
